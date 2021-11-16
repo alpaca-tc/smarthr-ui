@@ -58,7 +58,8 @@ const getSizes = (scaleFactor: number) => {
   return {
     XXS: getFontSize(scaleFactor, 3),
     XS: getFontSize(scaleFactor, 2),
-    S: getFontSize(scaleFactor, 1),
+    // FIXME! 小数点が悪さをしている可能性があるので暫定対応
+    S: `${14 / 16}rem`,
     M: getFontSize(scaleFactor),
     L: getFontSize(scaleFactor, -1),
     XL: getFontSize(scaleFactor, -2),
